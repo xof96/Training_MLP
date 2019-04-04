@@ -1,0 +1,8 @@
+#
+/.metadata/
+
+#ignore project files
+.idea/
+venv/
+MNIST-5000/
+QuickDraw-Animals/
