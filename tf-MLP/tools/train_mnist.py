@@ -34,5 +34,5 @@ if __name__ == "__main__":
         print("--------start training")
         my_mlp.train()
         print("--------end training")
-        # my_mlp.save_model()
+        # my_mlp.save_model(functions[i])
         # print("--------model saved")
