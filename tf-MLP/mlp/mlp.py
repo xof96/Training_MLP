@@ -11,6 +11,7 @@ class MLP:
         self.device = params['device']
         self.modeldir = params['model_dir']
         self.datadir = params['data_dir']
+        self.activation_function = params['activation_function']
         self.learning_rate = params['learning_rate']
         self.number_of_classes = params['number_of_classes']
         self.number_of_iterations = params['number_of_iterations']
@@ -31,17 +32,22 @@ class MLP:
         self.filename_train = os.path.join(self.datadir, "train.tfrecords")
         self.filename_test = os.path.join(self.datadir, "test.tfrecords")
         # print(" mean {}".format(self.mean_img.shape))
-        self.input_params = {'batch_size': self.batch_size,
-                             'number_of_batches': self.number_of_batches,
-                             'number_of_epochs': self.number_of_epochs,
-                             'input_size': self.input_size,
-                             'number_of_classes': self.number_of_classes,
-                             }
+        self.input_params = {
+            'batch_size': self.batch_size,
+            'number_of_batches': self.number_of_batches,
+            'number_of_epochs': self.number_of_epochs,
+            'input_size': self.input_size,
+            'number_of_classes': self.number_of_classes,
+            'activation_function': self.activation_function,
+        }
 
-        self.estimator_params = {'learning_rate': self.learning_rate,
-                                 'number_of_classes': self.number_of_classes,
-                                 'model_dir': self.modeldir,
-                                 'input_size': self.input_size}
+        self.estimator_params = {
+            'learning_rate': self.learning_rate,
+            'number_of_classes': self.number_of_classes,
+            'model_dir': self.modeldir,
+            'input_size': self.input_size,
+            'activation_function': self.activation_function,
+        }
 
     def train(self):
         """training"""
@@ -49,6 +55,7 @@ class MLP:
         with tf.device(self.device):
             estimator_config = tf.estimator.RunConfig(model_dir=self.modeldir,
                                                       save_checkpoints_steps=1000,
+                                                      save_summary_steps=100,
                                                       keep_checkpoint_max=10)
 
             classifier = tf.estimator.Estimator(model_fn=model.model_fn,

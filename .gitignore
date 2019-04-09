@@ -1,6 +1,6 @@
 #
 /.metadata/
-
+*.pyc
 #ignore project files
 .idea/
 venv/
