@@ -1,0 +1,48 @@
+Numbers - Sigmoid
+INFO:tensorflow:Saving dict for global step 5000: accuracy = 0.914, global_step = 5000, loss = 0.24581245
+Animals - Sigmoid************************
+INFO:tensorflow:Saving dict for global step 40000: accuracy = 0.5794081, global_step = 40000, loss = 1.4226921
+
+
+Numbers - Tanh
+INFO:tensorflow:Saving dict for global step 5000: accuracy = 0.928, global_step = 5000, loss = 0.31577572
+Animals - Tanh
+INFO:tensorflow:Saving dict for global step 40000: accuracy = 0.49145478, global_step = 40000, loss = 4.1108003
+
+
+Numbers - Relu***************************
+INFO:tensorflow:Saving dict for global step 5000: accuracy = 0.946, global_step = 5000, loss = 0.274553
+Animals - Relu
+INFO:tensorflow:Saving dict for global step 40000: accuracy = 0.52438515, global_step = 40000, loss = 7.2897696
+
+
+Numbers - Leaky-Relu
+INFO:tensorflow:Saving dict for global step 5000: accuracy = 0.934, global_step = 5000, loss = 0.3447707
+Animals - Leaky-Relu
+INFO:tensorflow:Saving dict for global step 40000: accuracy = 0.5368904, global_step = 40000, loss = 6.4779553
+
+------------------------------------------------------------------------------------------------------------
+
+Numbers - Adam - 0.01
+INFO:tensorflow:Saving dict for global step 5000: accuracy = 0.946, global_step = 5000, loss = 0.36695656
+
+Numbers - Adam - 0.001
+INFO:tensorflow:Saving dict for global step 5000: accuracy = 0.946, global_step = 5000, loss = 0.274553
+
+Numbers - GD - 0.01
+INFO:tensorflow:Saving dict for global step 5000: accuracy = 0.134, global_step = 5000, loss = 2.2897232
+
+Numbers - GD - 0.001
+INFO:tensorflow:Saving dict for global step 5000: accuracy = 0.134, global_step = 5000, loss = 2.2990868
+
+Animals - Adam - 0.01
+INFO:tensorflow:Saving dict for global step 40000: accuracy = 0.52313465, global_step = 40000, loss = 7.5294347
+
+Animals - Adam - 0.001
+INFO:tensorflow:Saving dict for global step 40000: accuracy = 0.5794081, global_step = 40000, loss = 1.4226921
+
+Animals - GD - 0.01
+INFO:tensorflow:Saving dict for global step 40000: accuracy = 0.08295123, global_step = 40000, loss = 2.4850397
+
+Animals - GD - 0.001
+INFO:tensorflow:Saving dict for global step 40000: accuracy = 0.08336807, global_step = 40000, loss = 2.4849117
